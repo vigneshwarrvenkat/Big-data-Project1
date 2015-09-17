@@ -1,0 +1,20 @@
+As per the assignment, I have planned to determine the directionality of USD dollar against CAD dollar.I have derived four features namely:
+The average of the every minute of the BID value
+
+The average of the every minute of the ASK value
+
+The Max of the BID value during the one minute period.
+
+The Min of the ASK value during the ONE minute period.
+
+Based on this, i could predict two labels ie Directionality of the USD dollar against CAD dollar.
+and the timeperiod during which  the directionality increases or decreases.
+
+As we know that the ask value would be more than the bid value, when the average of the bid value or the ASK value increases consequently for 2 min, the directionality is 1.
+
+when the average of the bid value or the ASK value decreases consequently for 2 min, the directionality is 0.
+
+Comparing the max and the min value:
+If the max value and the min value at a particular minute increases, the directionality is 1.
+
+If the max value and the min value at a particular minute decreases, the directionality is 0.
