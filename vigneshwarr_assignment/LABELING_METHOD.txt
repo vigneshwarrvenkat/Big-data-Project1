@@ -5,16 +5,31 @@ The average of the every minute of the ASK value
 
 The Max of the BID value during the one minute period.
 
+The Min of the BID value during the one minute period.
+
+The Max of the ASK value during the ONE minute period.
+
 The Min of the ASK value during the ONE minute period.
 
-Based on this, i could predict two labels ie Directionality of the USD dollar against CAD dollar.
-and the timeperiod during which  the directionality increases or decreases.
+Based on this, i try to predict two labels ie Directionality of the bid price of USD dollar against CAD dollar.
+and the directionality of the ask price of USD dollar against CAD dollar.
 
-As we know that the ask value would be more than the bid value, when the average of the bid value or the ASK value increases consequently for 2 min, the directionality is 1.
 
-when the average of the bid value or the ASK value decreases consequently for 2 min, the directionality is 0.
+Predicting the label: LABEL_BID
 
-Comparing the max and the min value:
-If the max value and the min value at a particular minute increases, the directionality is 1.
+ when the average value of bid
+* for one minute is less than the next average value of one minute and-
+* When the max value of bid for one minute is less than the next max value for one minute, the LABEL_BID becomes true.
+* else LABEL_BID becomes false
 
-If the max value and the min value at a particular minute decreases, the directionality is 0.
+
+Predicting the label: LABEL_ASK
+
+when the average value of ask
+* for one minute is less than the next average value for one minute and-
+* When the average of max value of ask for one minute is less than the average of next max value for one minute, the LABEL_ASK becomes true.
+* else LABEL_ASK becomes false
+
+
+
+

@@ -1,0 +1,5 @@
+1.I have included the entire Eclipse project-Analytics
+
+2.The resource folder contains the source file for the program.
+
+3.TestData1 is the file generated.
