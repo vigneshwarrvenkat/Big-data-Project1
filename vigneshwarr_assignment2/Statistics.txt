@@ -1,0 +1,70 @@
+Statistics: 
+
+My data set contains seven features.
+AverageBid, AverageAsk,MaxBid, MaxAsk,MinBid, MinAsk, Label.
+
+Below are my testing results data.
+
+The following were the stats for the test data1:
+ Data Size: 1000
+Probability : 0.3 to 0.6 range 
+Entropy: 0.9 to 0.4 range. 
+I couldnt reduce the entropy less than 0.4.....
+Information gain: Started from 0.05 gain till 0.897 gain.
+No of levels: 6
+
+Data Size: 2000
+Probability : 0.365 to 0.7 range 
+Entropy: 0.9 to 0.4 range. 
+I couldnt reduce the entropy less than 0.4.....
+Information gain: Started from 0.002 gain till 0.456 gain.
+No of levels: 9
+
+Data Size: 3000
+Probability : 0.3 to 0.567 range 
+Entropy: 0.9 to 0.4 range. 
+I couldnt reduce the entropy less than 0.4.....
+Information gain: Started from 0.05 gain till 0.5567 gain.
+No of levels: 7
+
+Data Size: 4000
+Probability : 0.345 to 0.6456 range 
+Entropy: 0.9 to 0.6 range. 
+I couldnt reduce the entropy less than 0.4.....
+Information gain: Started from 0.03 gain till 0.4569 gain.
+No of levels: 6
+
+Data Size: 5000
+Probability : 0.334 to 0.6456 range 
+Entropy: 0.9 to 0.6 range. 
+Uncertainity was high here as entropy is high...
+Information gain: Started from 0.05 gain till 0.2378 gain.
+No of levels: 4
+
+Data Size: 9000
+Probability : 0.3 to 0.6 range 
+Entropy: 0.9 to 0.5 range. 
+Entropy not less than 0.5....
+Information gain: Started from 0.01 gain till 0.5456 gain.
+No of levels: 9
+
+
+
+Data Size: 10000
+Probability : 0.3 to 0.6 range 
+Entropy: 0.9 to 0.3 range. 
+Was able to get it till 0.3...
+Information gain: Started from 0.01 gain till 0.6 gain.
+No of levels: 12
+
+
+Data Size: 30,000
+Probability : 0.3 to 0.7 range 
+Entropy: 0.9 to 0.2 range. 
+This is the best entropy i could get.
+Information gain: Started from 0.05 gain till 0.67 gain.
+No of levels: 6
+
+
+Performance: I couldnt reduce the entropy to absolute zero in any of the training data results.
+I would work on it to reduce the entropy as low as possible.

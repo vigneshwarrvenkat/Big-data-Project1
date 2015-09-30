@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 
 public class FileReader {
-	public static final String DATA_FILE = "TestData2.csv";
+	public static final String DATA_FILE = "TestData1.csv";
 
     public static ArrayList<Record> buildRecords() {
 		BufferedReader reader = null;
@@ -33,7 +33,7 @@ public class FileReader {
         	   line.trim();
 				String[] res = line.split(",");
 				
-				System.out.println("String " + Integer.parseInt(res[6]));
+			//	System.out.println("String " + Integer.parseInt(res[6]));
         	   
           //    StringTokenizer st = new StringTokenizer(line, ",");
               attributes = new ArrayList<Features>();
@@ -65,7 +65,7 @@ public class FileReader {
 			  
 				  attributes.add(new Features("Label", Integer.parseInt(res[6])));
 				  
-				  System.out.println(" hi" + attributes.get(6).getValue());
+				//  System.out.println(" hi" + attributes.get(6).getValue());
 			 
 			  
 			    		    
@@ -80,18 +80,16 @@ public class FileReader {
            
 
         } 
-        catch (IOException e) { 
-           System.out.println("Uh oh, got an IOException error: " + e.getMessage()); 
-        } 
+        
         catch (Exception e) {
-            System.out.println("Uh oh, got an Exception error: " + e.getMessage()); 
+            System.out.println("Exception error: " + e.getMessage()); 
         }
         finally { 
            if (fis != null) {
               try {
                  fis.close();
-              } catch (IOException ioe) {
-                 System.out.println("IOException error trying to close the file: " + ioe.getMessage()); 
+              } catch (IOException e) {
+                 System.out.println("IOException error trying to close the file: " + e.getMessage()); 
               }
            }
         }

@@ -4,7 +4,13 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.*;
 
-
+/*
+ * 
+ * 
+ * The main class which acts as the
+ * driver for reading the data from the 
+ * file and tree building
+ */
 
 
 
@@ -34,11 +40,11 @@ public class Hw2 {
 		}
 		
 		t.buildTree(records, root, learningSet);
-		System.out.print("Prediction for Play Tennis: ");
-		if(traverseTree(records.get(6), root) == 0) {
-		System.out.println("No");
+		System.out.print("Prediction of Currency : ");
+		if(traverseTree(records.get(5), root) == 0) {
+		System.out.println("Decrease");
 		} else {
-		System.out.println("yes");
+		System.out.println("Increase");
 		}
 		
 		
@@ -79,62 +85,22 @@ public class Hw2 {
 	}
 	
 	public static int setSize(String set) {
-		if(set.equalsIgnoreCase("")) {
-			return 3;
-		}
-		else if(set.equalsIgnoreCase("Wind")) {
+		
 			return 2;
-		}
-		else if(set.equalsIgnoreCase("Temperature")) {
-			return 3;
-		}
-		else if(set.equalsIgnoreCase("Humidity")) {
-			return 2;
-		}
-		else if(set.equalsIgnoreCase("Label")) {
-			return 2;
-		}
-		return 0;
+			
 	}
+		
+		
 	
 	public static String getLeafNames(int attributeNum, int valueNum) {
 		if(attributeNum == 0) {
 			if(valueNum == 0) {
-				return "Sunny";
+				return "Decrease";
 			}
 			else if(valueNum == 1) {
-				return "Overcast";
+				return "Increase";
 			}
-			else if(valueNum == 2) {
-				return "Rain";
-			}
-		}
-		else if(attributeNum == 1) {
-			if(valueNum == 0) {
-				return "Hot";
-			}
-			else if(valueNum == 1) {
-				return "Mild";
-			}
-			else if(valueNum == 2) {
-				return "Cool";
-			}
-		}
-		else if(attributeNum == 2) {
-			if(valueNum == 0) {
-				return "High";
-			}
-			else if(valueNum == 1) {
-				return "Normal";
-			}
-		}
-		else if(attributeNum == 3) {
-			if(valueNum == 0) {
-				return "Weak";
-			}
-			else if(valueNum == 1) {
-				return "Strong";
-			}
+			
 		}
 		
 		return null;
@@ -149,12 +115,15 @@ public class Hw2 {
 	 * @param root : root of the tree
 	 */
 	private static void print(Node root) {
+		int count = 0;
 		if (root == null) {
 			return;
 		}
-	System.out.println("count");
+	
 		if (root.getChildren() != null) {
 			for (Node child : root.getChildren()) {
+				System.out.println("Leaf: " + count);	
+				count = count+1;
 				print(child);
 			}
 		}
@@ -230,10 +199,12 @@ public class Hw2 {
 	
 	public static void populateAttrMap() {
 		attrMap = new ArrayList<String>();
-		attrMap.add("Outlook");
-		attrMap.add("Temperature");
-		attrMap.add("Humidity");
-		attrMap.add("Wind");
-		attrMap.add("PlayTennis");
+		attrMap.add("AverageBid");
+		attrMap.add("AverageAsk");
+		attrMap.add("MaxBid");
+		attrMap.add("MinBid");
+		attrMap.add("MaxAsk");
+		attrMap.add("MinAsk");
+		attrMap.add("Label");
 	}
 }

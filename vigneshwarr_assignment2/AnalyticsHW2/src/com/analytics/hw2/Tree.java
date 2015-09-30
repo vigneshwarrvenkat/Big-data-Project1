@@ -83,12 +83,6 @@ public class Tree {
 		return subset;
 	}
 	
-	public double calculateSurrogates(ArrayList<Record> records) {
-		return 0;
-		
-	}
 	
-	public void pruneTree() {
-		
+	
 	}
-}

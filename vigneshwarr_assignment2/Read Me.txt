@@ -1,0 +1,29 @@
+Note:I have provided the complete file from the Eclipse project.
+The src folder contains the source files. The test data will also be present in the folder.
+
+
+There are nine files present in the source directory. They are:
+HW2 Class: This class contains the main function. This acts as the driver for the entire program.
+It instantiates classes for reading the file and tree building..
+
+Record: This class contains the methods for setting and getting the attributes for the features.
+The attributes includes the names, value, boolean expression for every features. It stores the values in the form of arraylist. Each value in the arraylist is a record.(collection of all the features in a particular row.)
+
+Features: This class contains the variable declaration for storing the data in the features.
+Variables in this class represent String name, double value and the boolean expression. All these variables are stored in ArrayList for a particular feature. The set method is used to set the values to these variables from the filereader. The get method is used to get the values from the arraylist and used for checking the condition.
+
+Node: This class contains the declarations of variables and methods for a tree node and its children. 
+The get and set methods help in the tree building. The variables declared for a particular node includes the parent, child, entropy, Information gain.
+
+Tree: This class contains the variables and methods necessary for building a tree based on the entropy and the Information gain of every feature.The set and get methods help in populating and retrieving the values of the of each node in the tree.
+
+Entropy: This class helps in the calculation of the entropy before every split of the branch. It also calculates the Information Gain for every feature before the split.
+
+FileReader: This class reads the data from the source file and populates the feature arraylist for every feature and adds all the data as Record to the Record arraylist.
+
+Important: I have harcoded the file name in the class.
+
+
+
+
+

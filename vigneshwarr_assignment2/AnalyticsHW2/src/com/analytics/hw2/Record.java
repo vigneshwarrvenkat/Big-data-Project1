@@ -14,7 +14,7 @@ public class Record {
 		
 		for(int i=0; i<=6; i++){
 		
-		System.out.println("for :" + attributes.get(i).getValue());
+		//System.out.println("for :" + attributes.get(i).getValue());
 		
 		}
 	}

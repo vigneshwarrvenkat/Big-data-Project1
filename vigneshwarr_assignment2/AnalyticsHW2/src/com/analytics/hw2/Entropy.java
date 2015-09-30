@@ -21,7 +21,7 @@ public class Entropy {
 			for(int j = 0; j < data.size(); j++) {
 				//Record record = data.get(j);
 				
-				System.out.println(" value of record :  " + data.get(j).getAttributes().get(6).getValueLabel());
+			//	System.out.println(" value of record :  " + data.get(j).getAttributes().get(6).getValueLabel());
 				
 				if(data.get(j).getAttributes().get(6).getValueLabel() == i) {
 					count++;
