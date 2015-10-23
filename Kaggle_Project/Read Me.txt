@@ -1,0 +1,42 @@
+The Following are the classes present in the src folder:
+The source folder also contains the data files in the Image.orig. All the file path for the program is hard coded within the files.
+
+All libraries are within the project..
+
+BlobDemo: This is a primary Blob detection library to detect the blobs in image
+
+BlobFinder:This is the driverfor the BlobDemo.
+
+ColorExtraction:This library helps in extracting the color of the image.
+
+Compare:This is a driver class for Color Comparison.
+
+Contour: This library helps in finding the contour of the image.
+
+ContourComparator:This compares the original contour and the contour which is painted for finding the number of cavities in the image.
+
+FeatureExtraction:This is driver class which calls all the methods which extracts the features from the image.
+
+FindContours:This is another JAVA library for finding the contours.
+
+GenerateTree: This is a part of tree generation for random forest.
+
+HarrisFast:This library helps in detecting the number of Edges in the image.
+
+HarrisTest:This is the driver for the edge detection class.
+
+Histogram:This helps in converting the input image into a Histogram
+
+OpenCV:The OpenCV for driving the features.
+
+RandomForest:The class which generates the forest of trees based on the training data.
+
+ReadInput:This reads the input for the random forest tree generation from the features generated.
+
+Retrieval:This is the main class which drives the whole project.
+
+RGBFrame:The RGBFrame is used for the Blob detection.
+
+TextureExtraction:This library is used for finding the texture(gradients) fo the image.
+
+TreeNode:This is the basic file for the Tree generation in the random forest.
