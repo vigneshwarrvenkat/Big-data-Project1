@@ -1,0 +1,25 @@
+The Source code consists of six java files.
+Main.java
+ReadInput.java
+TreeNode.java
+GenerateTree.java
+Compare.java
+RandomForest.java
+
+Main.java is the main driver file for the project. Initially the ReadInput class is invoked for reading the file and populating the features. The number of trees to be generated is given as input(hardcoded) in the file.
+Next, the RandomForest class is invoked which further invokes other classes for Tree generation.
+
+This Main class reads the data from the Cassandra
+ and processes it to load into the random forest.
+The forest loads wih the predetermined input 
+and provides the accuracy and time period as the 
+output. Later the output is written back to the 
+cassandra.
+
+ReadInput.java reads the input (Testing and training) files and populates the features in the ArrayList.
+
+TreeNode.java is the basic class which defines the structure of every node in the tree.
+
+GenerateTree.java is the class which creates the trees using the TreeeNode class and command from the RandomForest class.
+
+RandomForest.java acts as the driver for creating the number of trees based on the input.It instantiates the generatetree class which helps in the generation of trees as per the input.It also calculates the error rate for the test data.
