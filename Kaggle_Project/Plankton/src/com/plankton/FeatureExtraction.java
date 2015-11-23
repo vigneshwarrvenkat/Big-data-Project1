@@ -315,32 +315,7 @@ public class FeatureExtraction {
                 bw.close();
     	        }
     	        
-    	   
-
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-	    
-	    
-	    	
-    
+  
     
     public static void RGB_HSV_Decompose(ColorProcessor cp){
     	
@@ -400,10 +375,6 @@ public class FeatureExtraction {
     }
 
 
-    
-    
-
-    
     public static void rgb2bin(BufferedImage in){
     	int h=in.getHeight();
     	int w=in.getWidth();

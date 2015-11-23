@@ -28,8 +28,7 @@ import com.plankton.HarrisFast.Corner;
  * HarrisTest.java
  * unseen.labs.face.harris
  * 
- * @author PERRAUDIN Steven <unseen07@gmail.com>
- * @date 3 mai 2010
+ * This class is referred from unseen labs ...UK
  *
  */
 public class HarrisTest {
@@ -56,9 +55,9 @@ public class HarrisTest {
 			e.printStackTrace();
 		}		 
 		
-		int width     = img.getWidth(); 	// largeur de l'image
-		int height    = img.getHeight(); 	// hauteur de l'image
-		int[][] input =  new int[width][height];		// tableau 2D [x][y] contenant l'image en niveau de gris (0-255)
+		int width     = img.getWidth(); 	// width of 'image
+		int height    = img.getHeight(); 	// height of l'image
+		int[][] input =  new int[width][height];		//  Two dimension of the image
 		
 		
 		for(i = 0 ; i < width - 1; i++){
@@ -69,9 +68,9 @@ public class HarrisTest {
 		
 		//////////////////////
 		 
-		double sigma   = 1.2;  // parametre du filtre gaussien
-		double k       = 0.06; // parametre de la formule de la mesure
-		int spacing = 8;    // distance minimum entre 2 coins
+		double sigma   = 1.2;  // Gaussion sigma
+		double k       = 0.06; // Parameter(constant to gaussian)
+		int spacing = 8;    // distance minimum 
 		 
 		HarrisFast hf = new HarrisFast(input,width,height);
 		int output = hf.filter(sigma,k,spacing);
@@ -103,7 +102,13 @@ public class HarrisTest {
  
 	}
 	
-	
+	/*
+	 * Returns the gray scale points
+	 * of the image.
+	 * Uses Bit manipulation to retrieve the 
+	 * R,G,B values
+	 * 
+	 */
 	
 	static int rgb2gray(int srgb) {
 		int r = (srgb >>16 ) & 0xFF;

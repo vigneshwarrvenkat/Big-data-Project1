@@ -3,6 +3,7 @@ package com.plankton;
 
 
 import java.io.*;
+
 import java.net.URL;
 import java.util.*;
 import java.awt.*;
@@ -10,23 +11,33 @@ import java.awt.image.*;
 
 import javax.swing.*;
 
+
+
+/**
+ *This class reads the blob image as input
+ *and detects the blobs in the image.
+ *These blobs are used to differentiate 
+ *the different image files the class reads.
+ *This code was referred from A.Greensted - http://www.labbookpages.co.uk
+ */
+
 public class BlobDemo
 {
-	
+
 	public BlobDemo(){
-		
+
 	}
 	public int FindBlob(String s)
 	{
 		// Load Source image
 		BufferedImage srcImage = null;
-		
+
 		System.out.println(" filename "+ s);
 
 		try
 		{
 			URL url = FeatureExtraction.class.getResource(s);
-		//	File imgFile = new File(s);
+			//	File imgFile = new File(s);
 			srcImage = javax.imageio.ImageIO.read(url);
 		}
 		catch (IOException ioE)
@@ -95,8 +106,8 @@ public class BlobDemo
 		// Create GUI
 		RGBFrame srcFrame = new RGBFrame(width, height, srcData);
 		RGBFrame dstFrame = new RGBFrame(width, height, dstData);
-		
-		/*
+
+
 
 		JPanel panel = new JPanel(new BorderLayout(5, 5));
 		panel.setBorder(new javax.swing.border.EmptyBorder(5, 5, 5, 5));
@@ -109,9 +120,9 @@ public class BlobDemo
 		frame.getContentPane().add(panel);
 		frame.pack();
 		frame.setVisible(true);
-		*/
+
 		return blobList.size();
 	}
-	
-	
+
+
 }

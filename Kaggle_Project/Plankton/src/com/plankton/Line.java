@@ -4,13 +4,19 @@ package com.plankton;
 
 import processing.core.*;
 
+/*
+ * Class to measure the angle,start and end point
+ * of the any line encountered in the image.
+ * 
+ */
+
 public class Line {
 	public PVector start, end;
 	public double angle;
 	public double x1, y1, x2, y2;
 	
 	public Line(double x1, double y1, double x2, double y2){
-		this.x1 = x1;
+		this.x1 = x1;  //Different start and end points of the line image
 		this.y1 = y1;
 		this.x2 = x2;
 		this.y2 = y2;
@@ -29,8 +35,8 @@ public class Line {
 	
 	
 	public static double angleBetween(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4){
-		double angle1 = Math.atan2(y1 - y2, x1 - x2);
+		double angle1 = Math.atan2(y1 - y2, x1 - x2); //calculates the angle between the co-ordinates
 		double angle2 = Math.atan2(y3 - y4, x3 - x4);
-		return angle1-angle2;
+		return angle1-angle2; //returns the angle between the lines.
 	}
 }

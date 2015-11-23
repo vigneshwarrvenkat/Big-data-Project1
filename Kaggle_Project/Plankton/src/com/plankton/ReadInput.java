@@ -3,10 +3,24 @@ package com.plankton;
 
 
 import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
+
+/**
+ * @author Vignesh
+ *
+/*
+ *Reads the input from the file along with the number of 
+ *trees to be generated.
+ *The data from the file is read and stored in an arraylist
+ *and the arraylist is passed as parameter to the random forest for 
+ *generation of trees 
+ * 
+ */
 public class ReadInput {
 //method to take the txt fle as input and pass those values to random forests
   BufferedReader BR = null;
@@ -23,7 +37,7 @@ public class ReadInput {
 		String sCurrentLine;
 		BR = new BufferedReader(new FileReader(path));
 
-		while ((sCurrentLine = BR.readLine()) != null) {
+		while ((sCurrentLine = BR.readLine()) != null) {   //reads the data from the file
 			ArrayList<Integer> Sp=new ArrayList<Integer>();int i;
 			if(sCurrentLine!=null){
 				
@@ -35,7 +49,7 @@ public class ReadInput {
 				S =" "+S+" ";
 			//	System.out.println("data2 : " + sCurrentLine);
 				for(i=0;i<S.length();i++){
-					if(Character.isWhitespace(S.charAt(i)))
+					if(Character.isWhitespace(S.charAt(i)))  // based on the white space, the number of fields are calculated
 						Sp.add(i);
 				}int[] DataPoint = new int[Sp.size()-1];
 				for(i=0;i<Sp.size()-1;i++){

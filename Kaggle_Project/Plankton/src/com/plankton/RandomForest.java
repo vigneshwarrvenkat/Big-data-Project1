@@ -8,6 +8,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 /**
  * Random Forest
+ * Ensemble used to generate trees
+ * Used for regression calculation.
+ * Calls the generate trees class to build the number of trees
  * 
  */
 public class RandomForest {
@@ -83,7 +86,10 @@ public class RandomForest {
 	}
 	
 	/**
-	 * 
+	 * Random forest testing the input data
+	 * The model is trained based on the training data
+	 * The prediction is based on the matching of the test data value and the actual 
+	 * value. The Actual value is based on the training data
 	 */
 	private void TestForest(ArrayList<GenerateTree> collec_tree,ArrayList<int[]> test_data ) {
 		int correstness = 0 ;int k=0;
@@ -246,7 +252,11 @@ public class RandomForest {
 	public void Stop() {
 		treePool.shutdownNow();
 	}
-	
+	/**
+	 * Evaluates the time taken to generate trees
+	 * Provides the output in terms of hrs,min,secs
+	 * 
+	 */
 	
 	private static String TimeElapsed(long timeinms){
 		int s=(int)(System.currentTimeMillis()-timeinms)/1000;

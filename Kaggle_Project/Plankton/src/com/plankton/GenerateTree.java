@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/*
+ * THis is the basic class where the 
+ * tree for the Random Forst is created
+ * based on the input of number of trees
+ */
 
 public class GenerateTree {
 
@@ -292,7 +297,7 @@ public class GenerateTree {
 					parent.right.Class=Class;
 				}
 			}
-			
+			//to check wherther the tree has reached the end of leaf
 			if (!parent.left.isLeaf)
 				RecursiveSplit(parent.left,Ntreenum);
 //			else {				

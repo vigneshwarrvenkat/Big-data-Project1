@@ -9,6 +9,14 @@ package com.plankton;
 
 import java.util.*;
 
+/**
+ *This class reads the blob image as input
+ *and detects the blobs in the image.
+ *These blobs are used to differentiate 
+ *the different image files the class reads.
+ *
+ */
+
 public class BlobFinder
 {
 	private byte[][] COLOUR_ARRAY = {{(byte)103, (byte)121, (byte)255},
