@@ -128,7 +128,7 @@ val valuelabel = new StringIndexer().setInputCol("label").setOutputCol("outlabel
 
     
 //Saving to Cassandra
-  val output = spark.parallelize(accuracy,getTime())
+  val output = spark.parallelize(accuracy,Date.getTime())
   
   output.saveToCassandra ("Classification", "Classify",SomeColumns("accuracy","time"))
   
