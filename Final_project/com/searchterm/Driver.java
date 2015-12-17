@@ -14,9 +14,14 @@ import org.apache.hadoop.mapreduce.lib.output.*;
 import org.apache.hadoop.util.*;
 
 public class Driver extends Configured implements Tool {
-
+	 static String input;
   public static void main(String args[]) throws Exception {
     int res = ToolRunner.run(new TfIdf(), args);
+    
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Please provide the input term");
+    input = scan.nextLine();
+    
     System.exit(res);
   }
 
