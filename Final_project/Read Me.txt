@@ -1,0 +1,25 @@
+TfIdf.java - This file calculates the TF-IDF for the text input from the files. It is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. The tf-idf value increases proportionally to the number of times a word appears in the document.
+
+Document.java -Class that represents a text document
+ that keeps track of the number of times a word appears in the document, it's term frequency, and eventually, its inverse document frequency (if used with TfIdf) for finding important keywords in the document.It is called in the TfIdf.java
+
+D3.java - The class that reads the co-occurences from the reducer and provides the output file in the format of flare json which is used for visualization.
+
+Driver.java - This is the main file which initiates the mapreduce process.
+
+Map.java - This is the Mapper class which overrides the map method. It instantiates the Tfidf class and get the input from the class.
+
+Reduce.java - This is the reducer class which overrides the reduce method to reduce to single key values and aggregates the count of all the terms.
+
+Json.java - This is the class which I used initially to write in normal flat Json format. Later D3 library was used to write to flare json format.
+
+Index.html: This is the file which I used for the data visulaization. I ran it in local host.
+
+d3.v3.min: The java script library for the D3 visualization.
+
+Library: 
+Attribute SelectionTest: This is another library used to preprocess the input text files.
+
+
+
+
